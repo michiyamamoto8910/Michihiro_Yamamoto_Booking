@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lorem Ipsum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="myCss.css">
+</head>
+<body>
+  <div class="background-of-page">
+  <div>
+    <a href="main.html">
+    <img src="images/logo.jpg" alt="Logo" height="100" width="200">
+  </a>
+  </div>
+  <nav>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html" data-toggle="modal" data-target="#exampleModalCenter" id="login-id">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main.html" id="signup-id">Sign up</a>
+      </li>
+      <li class="nav-item" style="display:none" id="logout-id">
+        <a href="main.html"><button onclick="window.localStorage.clear();" type="button" name="button"  class="btn btn-link">Logout</a></button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginform" action="passengerDetails.html">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="username">Name</label>
+                <input type="text" class="form-control mb-2" id="username" placeholder="Username" /required>
+              </div>
+              <div class="col-auto">
+                <label class="sr-only" for="password">Username</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-auto">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<form class="" id="confirm-passenger-form" action="index.html" method="post">
+<div id="border-1">
+  <h1 class="h2">Personal Information</h1>
+  <div class="totheright">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="first-name" class="">First name</label>
+      <input type="text" class="form-control" id="first-name" placeholder="">
+    </div>
+    <div class="totherightside">
+      <div class="form-group col-md-11">
+        <label for="last-name" class="">Last name</label>
+        <input type="text" class="form-control" id="last-name" placeholder="">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="birth-date" class="">Birth Date</label>
+      <input type="date" class="form-control" id="birth-date" placeholder="">
+    </div>
+  </div>
+  </div>
+
+  <h1 class="h2">Passport Information</h1>
+  <div class="totheright">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="passport-number" class="">Passport number</label>
+      <input type="text" class="form-control" id="passport-number" placeholder="">
+    </div>
+    <div class="totherightside">
+      <div class="form-group col-md-11">
+        <label for="nationality" class="">Nationality</label>
+        <input type="text" class="form-control" id="nationality" placeholder="" >
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="passport-expiration" class="">Expiration Date</label>
+      <input type="date" class="form-control" id="passport-expiration" placeholder="">
+    </div>
+  </div>
+</div>
+  <div id="searchbutton">
+      <button id="confirm-passenger" type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirm-details-modal">Submit</button>
+      <button onclick="getElementById('another-passenger').style.display='block';
+      getElementById(`confirm-passenger`).style.display='none';
+      getElementById(`second-passenger`).style.display='block'" type="button" id="add-another-passenger" class="btn btn-warning btn-lg" >Add Another passenger</button>
+    </div>
+  </div>
+</form>
+<br><br>
+
+
+<!-- SECOND FORM FOR ADD ANOTHER PASSENGER -->
+<form class="" id="another-confirm-passenger-form" action="index.html" method="post">
+  <div id="border-2">
+
+<div style="display:none" id="another-passenger">
+  <h1 class="h1" id="second-passenger" style="display:none">Passenger 2</h1>
+
+  <h1 class="h2">Personal Information</h1><br>
+  <div class="totheright">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="first-name" class="">First name</label>
+      <input type="text" class="form-control" id="second-first-name" placeholder="" >
+    </div>
+    <div class="totherightside">
+      <div class="form-group col-md-11">
+        <label for="last-name" class="">Last name</label>
+        <input type="text" class="form-control" id="second-last-name" placeholder="" >
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="birth-date" class="">Birth Date</label>
+      <input type="date" class="form-control" id="birth-date" placeholder="">
+    </div>
+  </div>
+  </div>
+
+  <h1 class="h2">Passport Information</h1>
+  <div class="totheright">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="passport-number" class="">Passport number</label>
+      <input type="text" class="form-control" id="second-passport-number" placeholder="" >
+    </div>
+    <div class="totherightside">
+      <div class="form-group col-md-11">
+        <label for="nationality" class="">Nationality</label>
+        <input type="text" class="form-control" id="nationality" placeholder="" >
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="passport-expiration" class="">Expiration Date</label>
+      <input type="date" class="form-control" id="passport-expiration" placeholder="">
+    </div>
+  </div>
+  <div id="searchbutton">
+      <button id="another-confirm-passenger" type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirm-details-modal">Submit</button>
+      <button onclick="getElementById(`another-passenger`).style.display='none';
+      getElementById(`confirm-passenger`).style.display='block';"type="button" name="button"
+      class="btn btn-danger btn-lg" id="cancel-button">Cancel adding</button>
+    </div>
+  </div>
+</div>
+  </div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="confirm-details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Please confirm details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 id="first-name-modal"></h6>
+        <h6 id="passport-number-modal"></h6>
+
+        <h6 id="line-for-display"></h6>
+
+        <h6 id = "other-passenger-name"></h6>
+        <h6 id = "other-passenger-passport-number"></h6>
+
+      </div>
+      <div class="modal-footer">
+        <a href="payment.html" role="button" class="btn btn-primary btn-sm">Proceed to payment</a>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<img src="cloud.png"  id="cloud-1" alt="">
+  <img src="cloud.png" id="cloud-2" alt="">
+</body>
+<footer>
+  <script src="js/myJQuery.js"></script>
+  <script src="js/myJScript.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</footer>
+</html>

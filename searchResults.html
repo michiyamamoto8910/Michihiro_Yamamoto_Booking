@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lorem Ipsum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="myCss.css">
+</head>
+<body>
+
+  <!--Nav;Logo;Login-->
+  <div>
+    <a href="main.html">
+    <img src="images/logo.jpg" alt="Logo" height="100" width="200">
+  </a>
+  </div>
+  <nav>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html" data-toggle="modal" data-target="#exampleModalCenter" id="login-id">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main.html" id="signup-id">Sign up</a>
+      </li>
+      <li class="nav-item" style="display:none" id="logout-id" class="logout-nav">
+        <a href="main.html"><button onclick="window.localStorage.clear();" type="button" name="button"  class="btn btn-link">Logout</a></button>
+      </li>
+    </ul>
+  </nav>
+
+      </ul>
+    </nav>
+  </div>
+  <form  action="passengerDetails.html" method="post">
+  <div class="container">
+    <div class="card">
+      <div class="card">
+        <div class="card-header">
+          <h6><span id="pal-name">PAL (Philippine Airlines)</span><span><img class="images" src="images/pal.png"></span></h6>
+        </div>
+        <div class="card-body">
+          <h6 class="show-homies"></h6><h5 class="price" id="pal-price">Php 20,000</h5><h6 class="show-cabin"></h6>
+          <h5 class="card-text"><span class="show-from-where"></span><span><img class="arrow" src="images/arrow.png"></span><span class="whereTo">Japan</span></h5>
+          <p><span class="show-from-date"></span><span class="duration">4h10m</span></p>
+          <p id="pal-depart-time">1:00-5:10</p>
+
+          <p><h5 class="card-text"><span class="show-from-where-return"></span><span><img class="arrow-return" src="images/arrow-return.png"></span><span class="whereToReturn">Japan</span></h5>
+            <p><span class="duration-return" id="arrow-return-id">4h50m</span><span class="show-return-date">7/25/2019</span><span><div class="float-right">
+              <button  id="go-to-passenger-details-pal" type="submit" class="btn btn-primary">Book</button>
+            </div>
+          </span></p>
+          <p class="time-return" id="pal-return-time" >14:00-18:50</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+  <br>
+  <br>
+
+  <form class=""  action="passengerDetails.html" method="post">
+  <div class="container" >
+    <div class="card">
+      <div class="card">
+        <div class="card-header">
+          <h6><span id="cathay-name">Cathay Pacific</span><span><img class="images" id="cathay" src="images/cathay-pacific.png"></span></h6>
+        </div>
+        <div class="card-body">
+          <h6 class="show-homies"></h6><h5 class="price" id="cathay-price">Php 27,350</h5><h6 class="show-cabin"></h6>
+          <h5 class="card-text"><span class="show-from-where"></span><span><img class="arrow"src="images/arrow.png"></span><span class="whereTo">Japan</span></h5>
+          <p><span class="show-from-date"></span><span class="duration">4h10m</span></p>
+          <p id="cathay-depart-time">23:00-3:10</p>
+
+          <p><h5 class="card-text"><span class="show-from-where-return"></span><span><img class="arrow-return"src="images/arrow-return.png"></span><span class="whereToReturn">Japan</span></h5>
+            <p><span class="duration-return" id="arrow-return-id-2">4h50m</span><span class="show-return-date">7/25/2019</span><span><div class="float-right">
+              <button class="btn btn-primary" id="go-to-passenger-details-cathay" type="submit">Book</button>
+            </div>
+          </span></p>
+          <p class= "time-return" id= "cathay-return-time">13:00-17:50</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </form>
+  <br>
+  <br>
+  <form class="" action="passengerDetails.html" method="post">
+  <div class="container">
+    <div class="card">
+      <div class="card">
+        <div class="card-header">
+          <h6 id="jetstar-name">Jetstar</h6><span><img id="jetstar" src="images/jetstar.png"></span>
+        </div>
+        <div class="card-body">
+          <h6 class="show-homies"></h6><h5 class="price" id="jetstar-price">Php 22,000</h5><h6 class="show-cabin"></h6>
+          <h5 class="card-text"><span class="show-from-where"></span><span><img class="arrow"src="images/arrow.png"></span><span class="whereTo">Japan</span></h5>
+          <p><span class="show-from-date"></span><span class="duration">4h10m</span></p>
+          <p id="jetstar-depart-time"> 13:00-19:10</p>
+
+          <p><h5 class="card-text"><span class="show-from-where-return"></span><span><img class="arrow-return"src="images/arrow-return.png"></span><span class="whereToReturn">Japan</span></h5>
+            <p><span class="duration-return" id="arrow-return-id-3">4h50m</span><span class="show-return-date">7/25/2019</span><span><div class="float-right">
+              <button id="go-to-passenger-details-jetstar" type="submit" class="btn btn-primary">Book</button>
+            </div>
+          </span></p>
+          <p class="time-return" id= "jetstar-return-time">8:00-12:50</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </form>
+  <br>
+  <br>
+  <form class="" action="passengerDetails.html" method="post">
+
+  <div class="container">
+    <div class="card">
+      <div class="card">
+        <div class="card-header">
+          <h6 id="airasia-name">Air Asia</h6><span><img class="images" src="images/airasia.png"></span>
+        </div>
+        <div class="card-body">
+          <h6 class="show-homies"></h6><h5 class="price" id="airasia-price">Php 19,750</h5><h6 class="show-cabin"></h6>
+          <h5 class="card-text"><span class="show-from-where"></span><span><img class="arrow"src="images/arrow.png"></span><span class="whereTo">Japan</span></h5>
+          <p><span class="show-from-date"></span><span class="duration">4h10m</span></p>
+          <p id="airasia-depart-time">12:30-16:40</p>
+
+          <p><h5 class="card-text"><span class="show-from-where-return"></span><span><img class="arrow-return"src="images/arrow-return.png"></span><span class="whereToReturn">Japan</span></h5>
+            <p><span class="duration-return" id="arrow-return-id-4">4h50m</span><span class="show-return-date">7/25/2019</span><span><div class="float-right">
+              <button id="go-to-passenger-details-airasia" type="submit" class="btn btn-primary">Book</button>
+            </div>
+          </span></p>
+          <p class="time-return" id= "airasia-return-time">13:30-18:20</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</form>
+<form class="" action="passengerDetails.html" method="post">
+  <div class="container">
+    <div class="card">
+      <div class="card">
+        <div class="card-header">
+          <h6 id="jal-name">JAL (Japan Airlines)</h6><span><img id="jal" src="images/jal.jpg"></span>
+        </div>
+        <div class="card-body">
+          <h6 class="show-homies"></h6><h5 class="price" id="jal-price">Php 27,000</h5><h6 class="show-cabin"></h6>
+          <h5 class="card-text"><span class="show-from-where"></span><span><img class="arrow"src="images/arrow.png"></span><span class="whereTo">Japan</span></h5>
+          <p><span class="show-from-date"></span><span class="duration">4h10m</span></p>
+          <p id="jal-depart-time">13:30-19:40</p>
+
+          <p><h5 class="card-text"><span class="show-from-where-return"></span><span><img class="arrow-return"src="images/arrow-return.png"></span><span class="whereToReturn">Japan</span></h5>
+            <p><span class="duration-return" id="arrow-return-id-5">4h50m</span><span class="show-return-date">7/25/2019</span><span><div class="float-right">
+                <button id="go-to-passenger-details-jal" type="submit" class="btn btn-primary">Book</button>
+            </div>
+          </span></p>
+          <p class="time-return" id= "jal-return-time">12:10-17:00</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+  <br><br>
+
+</body>
+<footer>
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Back to top</a>
+    <a class="navbar-brand"id="search-home" href="userMain.html">Home</a>
+
+  </nav>
+  <img src="cloud.png"  id="cloud-1" alt="">
+    <img src="cloud.png" id="cloud-2" alt="">
+  <script src="js/myJQuery.js"></script>
+  <script src="js/myJScript.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</footer>
+</html>

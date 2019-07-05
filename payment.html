@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="myCss.css">
+  </head>
+  <body>
+    <div class="background-of-page">
+    <div>
+      <a href="main.html">
+      <img src="images/logo.jpg" alt="Logo" height="100" width="200">
+    </a>
+    </div>
+    <nav>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html" data-toggle="modal" data-target="#exampleModalCenter" id="login-id">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="payment.html" id="signup-id">Sign up</a>
+        </li>
+        <li class="nav-item" style="display:none" id="logout-id">
+          <a href="main.html"><button onclick="window.localStorage.clear();" type="button" name="button"  class="btn btn-link">Logout</a></button>
+        </li>
+      </ul>
+    </nav>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="loginform" action="payment.html">
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="sr-only" for="username">Name</label>
+                  <input type="text" class="form-control mb-2" id="username" placeholder="Username" /required>
+                </div>
+                <div class="col-auto">
+                  <label class="sr-only" for="password">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                  </div>
+                </div>
+                <div class="col-auto">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Login</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p>Click images to select</p>
+
+    <img class="payment-images" id="visa" src="images/visa.png" onclick="document.getElementById('form-of-payment').style.display='block'">
+    <img class="payment-images" id ="paypal"src="images/paypal.jpg" onclick="document.getElementById('form-of-payment').style.display='block'">
+    <img class="payment-images" id="mastercard"src="images/mastercard.jpg" onclick="document.getElementById('form-of-payment').style.display='block'">
+      <h1 id="display-what-type-of-payment"></h1><br><br>
+      <h1 id="payment-mode"></h1>
+
+    <form style ="display:none" id="form-of-payment" action="summary.html">
+      <div class="form-row">
+        <div class="col">
+          <h6>First Name</h6>
+        </div>
+        <div class="col">
+          <h6 id="payment-label-last-name">Last name</h6>
+        </div>
+      </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" id="payment-first-name" placeholder="" >
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="payment-last-name" placeholder="" >
+    </div>
+  </div><br>
+  <div class="form-row">
+    <div class="col">
+      <h6>Credit card number</h6>
+    </div>
+    <div class="col">
+      <h6 id="payment-label-expiration-date">Expiration date</h6>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" id="credit-number" placeholder="xxxx-xxxx-xxxx-xxxx" >
+      <small id="emailHelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
+    </div>
+    <div class="col">
+      <input type="date" class="form-control" id="expiration-date"placeholder="Expiration Date" >
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <h6>CV code</h6>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" id="cv-code" placeholder="XXX">
+    </div>
+  <br>
+  <div class="col">
+
+  <button type="submit" id="go-to-summary-button"class="btn btn-primary">Book</button>
+  <a href="passengerDetails.html" role="button" class="btn btn-secondary">Back</button></a>
+  </div>
+</div>
+</form>
+</div>
+<img src="cloud.png"  id="cloud-1" alt="">
+  <img src="cloud.png" id="cloud-2" alt="">
+  </body>
+  <footer>
+    <script src="js/myJQuery.js"></script>
+    <script src="js/myJScript.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </footer>
+</html>

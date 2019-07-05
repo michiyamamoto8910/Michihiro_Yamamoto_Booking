@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lorem ipsum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="myCss.css">
+</head>
+
+<body>
+
+  <!--Nav;Logo;Login-->
+  <div>
+    <a href="main.html">
+      <img src="images/logo.jpg" alt="Logo" height="100" width="200">
+    </a>
+  </div>
+  <nav>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html" data-toggle="modal" data-target="#exampleModalCenter" id="login-id">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main.html" id="signup-id">Sign up</a>
+      </li>
+      <li class="nav-item" style="display:none" id="logout-id">
+        <a href="main.html"><button onclick="window.localStorage.clear();" type="button" name="button"  class="btn btn-link">Logout</a></button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginform" action="Main.html">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="username">Name</label>
+                <input type="text" class="form-control mb-2" id="username" placeholder="Username" /required>
+              </div>
+              <div class="col-auto">
+                <label class="sr-only" for="password">Username</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-auto">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<div class="background-of-page">
+  <!--jumbotron-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4" id="welcomeuser"></h1>
+      <p class="lead" id="welcomemessage">Search flights below.</p>
+    </div>
+  </div>
+  <!--Form;Textfields-->
+  <form id="search-form" action="searchResults.html">
+    <div class="totheright">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input  onclick="document.getElementById('returnDiv').style.display='block'" type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked="checked">
+        <label class="custom-control-label" for="customRadioInline1">Returning</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input onclick="document.getElementById('returnDiv').style.display='none'" type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">One way</label><br>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="from" class="badge badge-primary">From</label>
+          <input type="text" class="form-control" id="from" placeholder="" /required>
+        </div>
+        <div class="totherightside">
+          <div class="form-group col-md-11">
+            <label for="inputPassword4" class="badge badge-pill badge-info">To</label>
+            <input type="text" class="form-control" id="to" placeholder="" /required>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputEmail4" class="badge badge-primary">Depart</label>
+          <input type="date" class="form-control" id="depart" placeholder="" min="2019-07-05" /required>
+        </div>
+        <div class="totherightside">
+
+          <div class="form-group col-md-12" id="returnDiv">
+            <label for="inputPassword4" class="badge badge-pill badge-info">Return</label>
+            <input type="date" class="form-control" id="return" placeholder="" min="2019-07-05" >
+          </div>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h4>Travellers</h4>
+        <label for="number-of-adults">Adult</label>
+        <input type="number" id="number-of-adults" placeholder="0" min="1">
+        <label for="number-of-child">Child</label>
+        <input type="number" id="number-of-child" placeholder="0" min="1">
+        <label for="number-of-infants">Infant</label>
+        <input type="number" id="number-of-infants" placeholder="0" min="1">
+      </div>
+      <div id="searchbutton-div">
+        <button type="submit" id="searchbutton" class="btn btn-link" style="width: 100px; height: 70px">SEARCH</button>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <br>
+          <label for="cabin"><h4>Cabin Class</h4></label>
+          <select class="form-control" id="cabin" /required>
+            <option value="" disabled selected></option>
+            <option>Economy</option>
+            <option>Business</option>
+          </select>
+
+        </div>
+      </div>
+    </div>
+  </form>
+  <img src="images/search.png" id="search" alt="">
+  <img src="images/bubbles.png" id="bubbles"alt="">
+  <img src="cloud.png"  id="cloud-1" alt="">
+    <img src="cloud.png" id="cloud-2" alt="">
+  <h4 class="nav justify-content-end">Click images to know more</h4>
+  <button id="tokyo-tower" title="TOKYO TOWER" data-toggle="popover" style="width: 125px; height: 170px;"
+  data-trigger="focus" data-content="Tokyo Tower (東京タワー Tōkyō tawā, officially called 日本電波塔 Nippon denpatō ) is a communications and observation tower in the Shiba-koen district of Minato, Tokyo, Japan. At 332.9 metres (1,092 ft), it is the second-tallest structure in Japan. The structure is an Eiffel
+  Tower-inspired lattice tower that is painted white and international orange to comply with air safety regulations.">Click me</button>
+
+  <button id="merlion" title="MERLION" data-toggle="popover" style="width: 140px; height: 170px;"
+  data-trigger="focus" data-content="The Merlion (Malay: Singa-Laut, Chinese: 鱼尾狮, Tamil: மெர்லயன்) is the official mascot of Singapore, depicted as a mythical creature with a lion's head and the body of a fish. Being of prominent symbolic nature to Singapore and Singaporeans in general, it is widely used to represent
+  both the city state and its people in sports teams, advertising, branding, tourism and as a national personification.">Click me</button>
+
+  <button id="santorini" title="SANTORINI" data-toggle="popover" style="width: 140px; height: 100px;"
+  data-trigger="focus" data-content="ntorini (Greek: Σαντορίνη, pronounced [sandoˈrini]), officially Thira (Greek: Θήρα [ˈθira]) and classic Greek Thera (English pronunciation /ˈθɪərə/), is an island in the southern Aegean Sea, about 200 km (120 mi) southeast of Greece's mainland. It is the largest island of a small, circular archipelago, which bears the same name and is the remnant of a volcanic caldera. It forms the southernmost member of the Cyclades group of islands, with an area of approximately 73 km2 (28 sq mi) and a 2011 census population of 15,550. The municipality of Santorini includes the inhabited islands of Santorini and Therasia and the uninhabited islands of Nea Kameni, Palaia Kameni, Aspronisi, and Christiana.
+  The total land area is 90.623 km2 (34.990 sq mi). Santorini is part of the Thira regional unit.">Click me</button>
+
+  <button id="ocean" title="NIAGARA FALLS" data-toggle="popover" style="width: 140px; height: 130px;"
+  data-trigger="focus" data-content="Niagara Falls is a group of three waterfalls at the southern end of Niagara Gorge,
+  between the Canadian province of Ontario and the US state of New York. From largest to smallest, they are Horseshoe Falls (also known as Canadian Falls), American Falls and Bridal Veil Falls. Horseshoe Falls straddle the international border between Canada and the United States,
+  while American Falls and Bridal Veil Falls lie entirely within the United States. Bridal Veil Falls are separated from Horseshoe Falls by Goat
+  Island and from American Falls by Luna Island.">Click me</button>
+
+  <button id="boracay" title="BORACAY" data-toggle="popover" style="width: 220px; height: 130px;"
+  data-trigger="focus" data-content="Boracay is a small island in the Philippines located approximately 315 kilometres (196 miles) south of Manila and 2 kilometres (1.2 mi) off the northwest tip of Panay Island in Western Visayas region of the Philippines. Boracay Island and its beaches have received awards from numerous travel publications and agencies.[Note 1] The island comprises the barangays of Manoc-Manoc, Balabag, and Yapak in the municipality of Malay, in Aklan Province. The island is administered by the Tourism Infrastructure and Enterprise Zone Authority and the provincial government of Aklan. Apart from its white sand beaches, Boracay is also famous for being one of the world's top destinations for relaxation.
+  As of 2013 it was emerging among the top destinations for tranquility and nightlife.">Click me</button>
+
+  <button id="maldives" title="MALDIVES" data-toggle="popover" style="width: 220px; height: 130px;"
+  data-trigger="focus" data-content="The Maldives officially the Republic of Maldives, is a country in South Asia, located in the Arabian Sea of
+  the Indian Ocean. It lies southwest of Sri Lanka and India, about 1,000 kilometres (620 mi) from the Asian continent. The chain of 26 atolls stretches from Ihavandhippolhu Atoll in the north to Addu Atoll in the south. Comprising a territory spanning roughly 298 square kilometres (115 sq mi), the Maldives is one of the world's most geographically dispersed sovereign states as well as the smallest Asian country by land area and population, with around 427,756 inhabitants. Malé is the capital and the most populated city, traditionally called the King's Island for its central location.">Click me</button>
+  <img id ="bottom-image" src="images/footer.png" alt="Top picks">
+</div>
+</body>
+<footer>
+
+  <script src="js/myJQuery.js"></script>
+  <script src="js/myJScript.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</footer>
+
+</html>

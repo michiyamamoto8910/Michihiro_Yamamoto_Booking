@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Summary</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="myCss.css">
+  </head>
+  <body>
+    <div class="background-of-page">
+    <!-- NAV, LOGIN -->
+    <div>
+      <a href="main.html">
+      <img src="images/logo.jpg" alt="Logo" height="100" width="200">
+    </a>
+    </div>
+    <nav>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html" data-toggle="modal" data-target="#exampleModalCenter" id="login-id">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="main.html" id="signup-id">Sign up</a>
+        </li>
+        <li class="nav-item" style="display:none" id="logout-id">
+          <a href="main.html"><button onclick="window.localStorage.clear();" type="button" name="button"  class="btn btn-link">Logout</a></button>
+        </li>
+      </ul>
+    </nav>
+
+
+<div id="for-show">
+
+    <h5 id=summary-airline></h5>
+    <br>
+    <h5>Passengers:</h5>
+    <h6 id="summary-name"></h6>
+    <h6 id="summary-second-passenger-name"></h6>
+    <br>
+    <h5>Flight Details:</h5>
+    <h6 id="summary-depart-date-label">Depart date and time</h6>
+    <h6 id="summary-from-where"></h6>
+    <h6 id="summary-from-to"></h6>
+    <h6 id="summary-depart-date"></h6>
+    <h6 id="summary-depart-time"></h6>
+    <br>
+    <h6 id="summary-return-date-label"></h6>
+    <h6 id="summary-return-date"></h6>
+    <h6 id="summary-return-time"></h6>
+    <br>
+    <h6>Flight:PR431</h6>
+    <h6 id="summary-travellers"></h6>
+    <h6 id ="summary-cabin-class"></h6>
+    <h6 id="summary-price"></h6>
+    <h6>Reference number:89014819</h6>
+</div>
+
+
+<div id="to-download" style="display:none">
+
+    <h3 id=summary-airlines></h3>
+    <br>
+    <h1 id="summary-names"></h1>
+    <h1 id="summary-second-passenger-names"></h1>
+    <br>
+    <br>
+    <h3 id="summary-from-wheres"></h3>
+    <h3 id="summary-from-tos"></h3>
+    <h3 id= "download-summary-depart-date-label">Depart date and time</h3>
+    <h3 id="summary-depart-dates"></h3>
+    <h3 id="summary-depart-times"></h3>
+    <br><br>
+    <h3 id="download-summary-return-date-label"></h3>
+    <h3 id="summary-return-dates"></h3>
+    <h3 id="summary-return-times"></h3>
+    <br><br>
+    <h3 id ="summary-cabin-classs"></h3>
+    <br><br>
+    <h3>Flight:PR431</h3>
+
+    <h3>Reference number:89014819</h3>
+
+</div>
+<div id="editor"></div>
+  <button id="download-it" class="btn btn-warning btn-lg" onclick="window.localStorage.removeItem('second-first-name')">Download PDF</button>
+
+    <div class="toast" id="toast"data-delay="3000">
+        <div class="toast-header">
+          <strong class="mr-auto text-primary">Gentle reminder</strong>
+          <small class="text-muted"></small>
+        </div>
+        <div class="toast-body">
+          Please be at the airport two(2) hours before your flight.
+        </div>
+      </div>
+
+</div>
+<img src="cloud.png"  id="cloud-1" alt="">
+  <img src="cloud.png" id="cloud-2" alt="">
+  </body>
+  <footer>
+    <script src="js/myJQuery.js"></script>
+    <script src="js/myJScript.js"> </script>
+    <script src="js/jspdf.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </footer>
+</html>
